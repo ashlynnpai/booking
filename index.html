@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotels</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <script type="text/javascript">
+    $("document").ready(function(){
+  
+
+      $("#amount").slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [50, 100],
+        slide: function(evt, elem) {
+          $("#amtVal1").text(elem.values[0]);
+          $("#amtVal2").text(elem.values[1]);
+        }
+      });
+      $("#amtVal1").text($("#amount").slider("values", 0));
+      $("#amtVal2").text($("#amount").slider("values", 1));
+    });
+  </script>
+  <style>
+    .heavytext {
+      font-weight: bold;
+      color: red;
+    }
+    .sliderClass {
+      width: 400px;
+    }
+    </style>
+</head>
+
+<body>
+  <form>
+
+    <h3>Select a price per night: </p>
+    <div id="amount" class="amountClass"></div> 
+    </br>
+    <span id="amtVal1"></span> to <span id="amtVal2"></span>
+</form>
+</body>
+
+
+
