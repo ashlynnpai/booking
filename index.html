@@ -9,6 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 
+  <script type="text/javascript">
+    $("document").ready(function(){
+      $("#persons").spinner();
+      $("#persons").spinner("value", 1);
+
+    });
+  </script>
 </head>
 
 <body>
@@ -16,6 +23,8 @@
   <h1>Select Accommodation</h1>
   
   <form>
+    <h3>Number of Persons: </h3>
+  <input type="text" id="persons" class="numberPersons"/>
 
     <h3>Select a price per night: </h3>
     <div id="amount" class="amountClass"></div> 
@@ -23,6 +32,4 @@
     <span id="amtVal1"></span> to <span id="amtVal2"></span>
 </form>
 </body>
-
-
 
