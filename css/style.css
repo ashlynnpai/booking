@@ -1,3 +1,23 @@
 .amountClass {
   width: 600px;
 }
+
+#searchCity {
+  margin-left: 30px;
+  border-radius: 10%;
+  height: 30px;
+  width: 300px;
+}
+
+h3 {
+  margin-top: 50px;
+}
+
+.ui-autocomplete {
+  max-height: 250px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+  /* add padding for vertical scrollbar */
+  padding-right: 5px;
+}

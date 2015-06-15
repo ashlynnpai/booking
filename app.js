@@ -1,5 +1,5 @@
     $("document").ready(function(){
-      
+
       $("#amount").slider({
         range: true,
         min: 0,
@@ -12,5 +12,7 @@
       });
       $("#amtVal1").text($("#amount").slider("values", 0));
       $("#amtVal2").text($("#amount").slider("values", 1));
+
     });
+
 

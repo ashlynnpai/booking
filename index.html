@@ -13,7 +13,6 @@
     $("document").ready(function(){
       $("#persons").spinner();
       $("#persons").spinner("value", 1);
-
     });
   </script>
 </head>
@@ -31,5 +30,27 @@
     </br>
     <span id="amtVal1"></span> to <span id="amtVal2"></span>
 </form>
+
+  <script type="text/javascript">
+  var cities = ["San Francisco", "New York", "Las Vegas"];
+    $("document").ready(function(){
+        $("#searchCity").autocomplete({
+      source: getData,
+      autoFocus: true
+      });
+    });
+
+    function getData(req, callback) {
+var result = [];
+for (var i = 0; i < cities.length; i++) {
+  if (cities[i].substring(0,1) == req.term.toUpperCase())
+    result.push(cities[i]);
+}
+callback(result);
+    }
+  </script>
+
+<h3><label>Search cities</label><input id="searchCity" type="text" /></h3>
+
 </body>
 
